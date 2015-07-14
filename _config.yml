@@ -1,7 +1,7 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+title: Steve Yang
+description: 杨海明的博客
 
-url: http://brianmaierjr.github.com/long-haul
+url: http://yanghaiming.com
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
@@ -13,15 +13,16 @@ paginate: 5
 navigation:
  - title: Home
    url: /index.html
+ - title: Posts
+   url: /posts
  - title: About
    url: /about
- - title: Contact
-   url: /contact
+ 
 
 social:
-   github: brianmaierjr
-   twitter: brianmaierjr
-   facebook: brianmaierjr
-   email: brimaidesigns@gmail.com
+   github: SteveYang
+   Weiobo: yhmshh
+   Renren: 杨海明
+   email: yhm1996@yahoo.com
 
-google_analytics: "UA-58263416-1"
+google_analytics: ""
