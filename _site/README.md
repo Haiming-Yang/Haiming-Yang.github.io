@@ -1,49 +1,39 @@
-![preview Long Haul](/preview.jpg)
+##this is my blog
+博客搭载在github上，地址:soohu.github.io
 
-Long Haul is a minimal jekyll theme built with COMPASS / SASS / SUSY and focuses on long form blog plosts. It is meant to used as a starting point for a jekyll blog/website.
+##Usage
+如果觉得可以的话可以直接clone这个项目
 
-If you really enjoy Long Haul and want to give me credit somewhere on the send or tweet out your experience with Long Haul and tag me [@brianmaierjr](https://twitter.com/brianmaier).
+post
 
-####[View Demo](http://brianmaierjr.com/long-haul)
+* title
+* layout
+* author
+* category
+* tag
 
-## Features
 
-- Minimal, Type Focused Design
-- Built with SASS + COMPASS
-- Layout with SUSY Grid
-- SVG Social Icons
-- Responsive Nav Menu
-- XML Feed for RSS Readers
-- Contact Form via Formspree
-- 5 Post Loop with excerpt on Home Page
-- Previous / Next Post Navigation
-- Estimated Reading Time for posts
-- Stylish Drop Cap on posts
-- A Better Type Scale for all devices
+##Options
+施工中
 
-## Setup
+##Development
+1. 添加了多说评论插件
+2. 修改博客样式更偏向中文
+3. 博客样式个人化修改
+4. 增加highlight代码高亮
+5. 添加了分类页、归档页和标签页
+6. ...
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Fork the [Long Haul repo](http://github.com/brianmaierjr/long-haul)
-3. Clone it
-4. Install susy `gem install susy` 
-5. Install normalize `gem install normalize-scss`
-6. Run Jekyll `jekyll serve -w`
-7. Run `compass watch`
-8. Customize!
 
-## Site Settings
+##Improvement
+1. 提高响应式
 
-The main settings can be found inside the `_config.yml` file:
 
-- **title:** title of your site
-- **description:** description of your site
-- **url:** your url
-- **paginate:** the amount of posts displayed on homepage
-- **navigation:** these are the links in the main site navigation
-- **social** diverse social media usernames (optional)
-- **google_analytics** Google Analytics key (optional)
+##Author
+博客原作者:Mark Otto 
+[github](github.com/mdo)
 
-## License
+博客修改:SooHu
 
-This is [MIT](LICENSE) with no added caveats, so feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
+##License
+MIT

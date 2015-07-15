@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Ios学习笔记——添加音效和播放音乐 &middot; Steve Yang
+    
+  </title>
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="/public/css/syntax.css"> -->
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/pygments.css">
+  <link rel="stylesheet" href="/public/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400"> -->
+
+  <!-- Icons -->
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/img/apple-touch-icon-144-precomposed.png"> -->
+  <link rel="shortcut icon" href="/public/img/yhm.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- livereload test -->
+  <!--<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>-->
+
+  <!-- audioplayer -->
+  <script src="/public/js/jquery-1.11.1.js"></script>
+  <script src="/public/js/audioplayer/amazingaudioplayer.js"></script>
+  <link rel="stylesheet" type="text/css" href="/public/css/audioplayer/initaudioplayer-1.css">
+
+
+
+</head>
+
+
+  <body class="">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <div class="sidebar-logo">
+      <a href="/"><img src="/public/img/yhm.jpg"></a>
+    </div>
+    <p>Thoughts and writings by Steve Yang.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/"><i class="fa fa-home fa-fw"></i>&nbsp 主页·&nbspHome</a>
+    <a class="sidebar-nav-item" href="/archive/"><i class="fa fa-file-text-o fa-fw"></i>&nbsp 归档·&nbspArchive</a>
+    <a class="sidebar-nav-item" href="/category/"><i class="fa fa-book fa-fw"></i>&nbsp 分类·&nbspCategory</a>
+    <a class="sidebar-nav-item" href="/tag/"><i class="fa fa-tags fa-fw"></i>&nbsp 标签·&nbspTag</a>
+    <!--<a class="sidebar-nav-item" href="/works/">works</a>-->
+    <a class="sidebar-nav-item" href="/about/"><i class="fa fa-hand-o-right fa-fw"></i>&nbsp 关于·&nbspAbout</a>
+    <span class="sidebar-nav-item"><i class="fa fa-info-circle">&nbsp&nbsp  </i>Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+
+    
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    
+
+      <div class="container content">
+      
+      <a href="/">
+        <svg id="mustache" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 79.5 45.7" enable-background="new 0 0 79.5 45.7" xml:space="preserve">
+                  <g transform="translate(0,-952.36217)" opacity="0.95">
+                    <path id="path2987" fill="#010101" d="M28.2,971.4c-10,0.5-19.1,13.3-28.2,2.1c0,15.1,23.7,30.5,39.8,16.3
+                    c16,14.1,39.8-1.3,39.8-16.3c-12.5,15.4-25-14.4-39.8,4.5C35.8,972.7,31.9,971.2,28.2,971.4z"/>
+                  </g>
+        </svg>
+      </a>
+     
+<h2 class="post-name"></h2>
+<div class="post">
+  <div class="post-heading inside">
+    <img src="/public/img/SooHu.jpg">
+    <h1 class="post-title">
+      <a class="post-title-blog" href="">
+        Ios学习笔记——添加音效和播放音乐
+      </a>
+    </h1>
+      <p class="post-info">
+        
+          转载SooHu
+        
+      </p>
+      <span class="post-info"><i class="fa fa-calendar"></i>&nbsp2015/05/02  </span>
+      <span class="post-info"><i class="fa fa-book"></i>&nbsp<a href="/category/index.html#ios">ios</a></span>
+      <span class="post-info"><i class="fa fa-tags"></i>&nbsp<a href="/tag/index.html#iOS">iOS</a></span> 
+      <span class="post-info">&nbsp<a href="/tag/index.html#"></a></span>
+      <span class="post-info">&nbsp<a href="/tag/index.html#"></a></span>
+  </div>
+  <div class="post-content">
+    <h3>给Button添加音效</h3>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="cp">#import &lt;AudioToolbox/AudioToolbox.h&gt;</span>
+
+<span class="k">@interface</span> <span class="nc">WebViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="bp">UIWebViewDelegate</span><span class="o">&gt;</span>
+<span class="p">{</span>
+    <span class="n">SystemSoundID</span> <span class="n">soundID</span><span class="p">;</span><span class="c1">//实例变量</span>
+<span class="p">}</span>
+<span class="k">@end</span>
+
+
+<span class="o">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">goForward</span><span class="p">:(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">webView</span><span class="p">.</span><span class="n">canGoForward</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">webView</span> <span class="n">goForward</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="c1">//传入音效名称和后缀名</span>
+    <span class="p">[</span><span class="nb">self</span> <span class="nl">playSoundEffect</span><span class="p">:</span><span class="s">@&quot;pop&quot;</span> <span class="nl">type</span><span class="p">:</span><span class="s">@&quot;wav&quot;</span><span class="p">];</span>
+<span class="p">}</span>
+
+
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">playSoundEffect</span><span class="p">:(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">name</span> <span class="nl">type</span><span class="p">:(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">type</span>
+<span class="p">{</span>
+    <span class="c1">//得到音效文件的地址</span>
+    <span class="bp">NSString</span> <span class="o">*</span><span class="n">soundFilePath</span> <span class="o">=</span><span class="p">[[</span><span class="bp">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">pathForResource</span><span class="p">:</span><span class="n">name</span> <span class="nl">ofType</span><span class="p">:</span><span class="n">type</span><span class="p">];</span>
+    <span class="c1">//将地址字符串转换成url</span>
+    <span class="bp">NSURL</span> <span class="o">*</span><span class="n">soundURL</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSURL</span> <span class="nl">fileURLWithPath</span><span class="p">:</span><span class="n">soundFilePath</span><span class="p">];</span>
+    
+    <span class="c1">//生成系统音效id</span>
+    <span class="n">AudioServicesCreateSystemSoundID</span><span class="p">((</span><span class="k">__bridge</span> <span class="n">CFURLRef</span><span class="p">)</span><span class="n">soundURL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">soundID</span><span class="p">);</span>
+    <span class="c1">//播放系统音效</span>
+    <span class="n">AudioServicesPlaySystemSound</span><span class="p">(</span><span class="n">soundID</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+
+<h3>点击Button播放音乐</h3>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="cp">#import &quot;ViewController.h&quot;</span>
+<span class="cp">#import &lt;AVFoundation/AVFoundation.h&gt;</span><span class="c1">//导入AVFoundation库</span>
+<span class="k">@interface</span> <span class="nc">ViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="bp">AVAudioPlayerDelegate</span><span class="o">&gt;</span><span class="c1">//接受委托</span>
+<span class="k">@property</span> <span class="bp">AVAudioPlayer</span> <span class="o">*</span><span class="n">player</span><span class="p">;</span>
+<span class="k">@end</span>
+
+
+
+<span class="o">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">play</span><span class="p">:(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span>
+<span class="p">{</span>
+    <span class="bp">NSString</span> <span class="o">*</span><span class="n">soundFilePath</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">pathForResource</span><span class="p">:</span><span class="s">@&quot;life&quot;</span> <span class="nl">ofType</span><span class="p">:</span><span class="s">@&quot;mp3&quot;</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">soundFilePath</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">NSURL</span> <span class="o">*</span><span class="n">soundURL</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSURL</span> <span class="nl">fileURLWithPath</span><span class="p">:</span><span class="n">soundFilePath</span><span class="p">];</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span><span class="n">soundURL</span><span class="p">);</span>
+        <span class="bp">NSError</span> <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+        <span class="bp">AVAudioPlayer</span> <span class="o">*</span><span class="n">player</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">AVAudioPlayer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithContentsOfURL</span><span class="p">:</span><span class="n">soundURL</span> <span class="nl">error</span><span class="p">:</span><span class="o">&amp;</span><span class="n">error</span><span class="p">];</span>
+        
+        <span class="nb">self</span><span class="p">.</span><span class="n">player</span> <span class="o">=</span> <span class="n">player</span><span class="p">;</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">player</span><span class="p">.</span><span class="n">volume</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">player</span><span class="p">.</span><span class="n">numberOfLoops</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">player</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span><span class="c1">//设置委托</span>
+        <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">player</span> <span class="n">prepareToPlay</span><span class="p">];</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">error</span><span class="p">){</span>
+            <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;初始化播放器过程发生错误,错误信息:%@&quot;</span><span class="p">,</span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">player</span> <span class="n">play</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+    
+  </div>
+</div>
+
+<!-- <div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/ios/2015/04/01/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%B7%BB%E5%8A%A0%E6%89%8B%E5%8A%BF%E6%93%8D%E4%BD%9C/">
+            Ios学习笔记——添加手势操作
+            <small>01 Apr 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/%E7%94%B5%E5%BD%B1/2015/01/14/2014%E5%B9%B4%E6%88%91%E7%9C%8B%E8%BF%87%E6%9C%80%E5%A5%BD%E7%9A%8410%E9%83%A8%E7%94%B5%E5%BD%B1/">
+            2014年我看过最好的10部电影
+            <small>14 Jan 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2015/01/05/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Bower%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%B7%B5%EF%BC%881%EF%BC%89/">
+            慕课网学习笔记——bower的使用实践（1）
+            <small>05 Jan 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div> -->
+
+
+<div class="sub_pagination">
+  
+  
+    <a class="sub_pagination-item" id="lastest">已经是最新一篇&nbsp<i class="fa fa-unlink"></i></a>
+  
+  
+    <a class="sub_pagination-item newer" href="/ios/2015/04/01/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%B7%BB%E5%8A%A0%E6%89%8B%E5%8A%BF%E6%93%8D%E4%BD%9C/">Ios学习笔记——添加手势操作&nbsp<i class="fa fa-share"></i></a>
+  
+</div>
+
+
+<!-- <div class="comments"> -->
+<h2>Comments</h2>
+
+
+
+<!-- Duoshuo Comment BEGIN -->  
+<div id="comment">
+    <div class="ds-thread" data-title="Ios学习笔记——添加音效和播放音乐"></div>
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"soohu"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = '../../../../../public/js/duoshuo.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+</div>
+
+
+<!-- Duoshuo Comment END -->
+      </div>
+    </div>
+    
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <div class="footer">
+  <p>  Copyright © 2015 - <a href="/">Steve Yang</a> - Powered by 
+    <a href="http://jekyllrb.com/">Jekyll</a>.
+    <a href="http://github.com/">Github</a>
+  </p>
+  <ul>
+    <li><a href="/"><i class="fa fa-twitter fa-2x"></i></a></li>
+    <li><a href="https://github.com/Haiming-Yang"><i class="fa fa-github fa-2x"></i></a></li>
+    <!--<li><a href="https://www.linkedin.com/nhome/?trk="><i class="fa fa-linkedin fa-2x"></i></a></li>-->
+  </ul>
+</div>
+
+    <!-- "The ending isn’t any more important than the moments leading to it." -Dr. Eva Rosalene, To The Moon -->
+  </body>
+</html>
+

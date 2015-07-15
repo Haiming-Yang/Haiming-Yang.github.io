@@ -1,27 +1,29 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+# Dependencies
+markdown:         rdiscount
+highlighter:      pygments
 
-url: http://brianmaierjr.github.com/long-haul
-baseurl: ""
-paginate_path: "blog/page:num/"
-permalink: blog/:title/
+#
+encoding:         "utf-8"
+# Permalinks
+permalink:        pretty
 
-markdown: redcarpet
-highlighter: pygments
-paginate: 5
+# Setup
+title:            Steve Yang
+tagline:          'We are infinite.'
+description:      'Thoughts and writings by Steve Yang.'
+url:              http://yanghaiming.com
 
-navigation:
- - title: Home
-   url: /index.html
- - title: About
-   url: /about
- - title: Contact
-   url: /contact
+author:
+  name:           'SteveYang'
+  url:            https://github.com/Haiming-Yang
 
-social:
-   github: brianmaierjr
-   twitter: brianmaierjr
-   facebook: brianmaierjr
-   email: brimaidesigns@gmail.com
+paginate:         5
 
-google_analytics: "UA-58263416-1"
+# Custom vars
+version:          1.0.0
+
+# duoshuo
+comments :
+    provider : duoshuo
+    duoshuo :
+      short_name : yhm
