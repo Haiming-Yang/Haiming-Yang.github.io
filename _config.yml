@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Dependencies
 markdown:         rdiscount
 highlighter:      pygments
@@ -7,15 +6,6 @@ highlighter:      pygments
 encoding:         "utf-8"
 # Permalinks
 permalink:        pretty
-=======
-title: Steve Yang
-description: 杨海明的博客
-
-url: http://yanghaiming.com
-baseurl: ""
-paginate_path: "blog/page:num/"
-permalink: blog/:title/
->>>>>>> origin/master
 
 # Setup
 title:            Steve Yang
@@ -23,7 +13,6 @@ tagline:          'We are infinite.'
 description:      'Thoughts and writings by Steve Yang.'
 url:              http://yanghaiming.com
 
-<<<<<<< HEAD
 author:
   name:           'SteveYang'
   url:            https://github.com/Haiming-Yang
@@ -38,21 +27,3 @@ comments :
     provider : duoshuo
     duoshuo :
       short_name : yhm
-=======
-navigation:
- - title: Home
-   url: /index.html
- - title: Posts
-   url: /posts
- - title: About
-   url: /about
- 
-
-social:
-   github: SteveYang
-   Weiobo: yhmshh
-   Renren: 杨海明
-   email: yhm1996@yahoo.com
-
-google_analytics: ""
->>>>>>> origin/master
