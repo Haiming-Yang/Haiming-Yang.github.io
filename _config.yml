@@ -17,7 +17,7 @@ author:
   name:           'SteveYang'
   url:            https://github.com/Haiming-Yang
 
-paginate:         5
+paginate:         3
 
 # Custom vars
 version:          1.0.0
