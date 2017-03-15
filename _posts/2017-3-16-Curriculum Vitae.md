@@ -14,6 +14,7 @@ tag: [Curriculum Vitae]
 
 ##Education
 _*Sep 2014- Present*_
+
 **Wuhan University (WHU)**, Wuhan, China Sep 2014- Present 
 
 **B.sc in Software Engineering** (expected in Jul 2018)
