@@ -10,7 +10,9 @@ tag: [Curriculum Vitae]
 #Haiming YANG
 
 > * **Email:** haimingyang.96@gmail.com 
-* **Tel:** (+86) 13007137723* **Address:** International School of Software, Wuhan University, Wuhan, Hubei Province, P.R.China. 430072
+
+> * **Tel:** (+86) 13007137723
+> * **Address:** International School of Software, Wuhan University, Wuhan, Hubei Province, P.R.China. 430072
 
 ##Education
 _*Sep 2014- Present*_
