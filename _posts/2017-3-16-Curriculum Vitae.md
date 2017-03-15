@@ -5,7 +5,7 @@ title: Curriculum Vitae
 category: About Me
 tag: [Curriculum Vitae]
 ---
-Curriculum Vitae
+
 
 #Haiming YANG
 
