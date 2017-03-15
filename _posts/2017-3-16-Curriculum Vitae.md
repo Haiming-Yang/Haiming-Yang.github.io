@@ -15,7 +15,10 @@ tag: [Curriculum Vitae]
 ##Education
 _*Sep 2014- Present*_
 **Wuhan University (WHU)**, Wuhan, China Sep 2014- Present 
-**B.sc in Software Engineering** (expected in Jul 2018)**GPA(major):3.81/4.0**, ranking: 5/168**Core Courses:** Experiment of C++ Programming (97/100), Human-Computer Interaction (91/100), C# Programming (89/100), Object- Oriented Programming(JAVA) (94/100), Computer Graphics (94/100), Embedded Software Technology (95/100), System Level Program Design (92/100), Database System (89/100)
+
+**B.sc in Software Engineering** (expected in Jul 2018)
+**GPA(major):3.81/4.0**, ranking: 5/168
+**Core Courses:** Experiment of C++ Programming (97/100), Human-Computer Interaction (91/100), C# Programming (89/100), Object- Oriented Programming(JAVA) (94/100), Computer Graphics (94/100), Embedded Software Technology (95/100), System Level Program Design (92/100), Database System (89/100)
 ##Honors
 
 | Name | Date |
