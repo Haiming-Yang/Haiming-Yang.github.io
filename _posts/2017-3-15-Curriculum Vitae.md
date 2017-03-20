@@ -41,7 +41,9 @@ Odyssey of the Mind, often called OM, is a creative problem-solving competition.
 
 ##Skills
 * **Software development:** JAVA, Swift, Objective-C, Xcode, C#, C++, IDEA, Visual Studio, Git 
-* **Data analysis:** Python, R, Pycharm, Rstudio* **Machine learning:** SK-Learn, numpy, Theano* **Design:** Office Suits, Axure, Adobe Photoshop, After Effects, Illustrator
+* **Data analysis:** Python, R, Pycharm, Rstudio* **Machine learning:** SK-Learn, numpy, Theano
+
+* **Design:** Office Suits, Axure, Adobe Photoshop, After Effects, Illustrator
 
 ##Research Experiences
 _*Oct 2015-present*_
@@ -51,6 +53,7 @@ _*Oct 2015-present*_
 > * Raised the computational method’s accuracy on cell cycle stage recognition by 20% through adopting RNN and DNN (deeplearning networks) compared to traditional machine learning methods (SVM, Random Forest, PCA).* Selected gene features by PCA method instead of database-based method (such as the features selected by text mining orexperiments), since PCA method could reveal the internal structure of the data.*  Verified the feasibility of implementing deep learning methods (RNN&DNN) on the transcriptome data, it was the first time thatdeep learning methods used on transcriptome data, and it was hopeful to implement on other problems (cell types, sub-population).
 
 _*Apr 2015-Mar 2016*_
+
 **School of Health Science, Wuhan University**, Wuhan, China
 
 ***The exploration on implementing wearable devices and smart phones for warning and treatment for fatal heart disease Research Assistant***, Advisor: Professor Qiqiang HE School of Health Science Wuhan University
@@ -78,6 +81,7 @@ _*Apr 2015-Mar 2016*_
 
 
 *Sep 2014- Jul 2016*
+
 **Basketball Team, ISS of Wuhan University** | Team Member 
 
 > * Champion of Xinsheng Cup in WHU (2014)* Quarter final winner of Tengfei Cup in WHU (2015)* Second place of Tengfei Cup in WHU (2016)
