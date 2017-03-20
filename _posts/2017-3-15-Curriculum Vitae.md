@@ -93,7 +93,7 @@ _*Apr 2015-Mar 2016*_
 *Oct 2015-present*
 
 **Intern, Microsoft Research Asia**, Wuhan, China Sep 2014- present
-> *  Coordinate MSRA(Beijing) and Wuhan University remotely, implement the activities of MSRA in WHU.
+> * Coordinate MSRA(Beijing) and Wuhan University remotely, implement the activities of MSRA in WHU.
 
 
 >* Designed and organized Microsoft Technical Salon, which helped the students in other fields know the beauty of computer.
@@ -129,4 +129,6 @@ _*Apr 2015-Mar 2016*_
 
 
 >* Second place of Tengfei Cup in WHU (2016)
+
+1
 
